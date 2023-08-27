@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Container } from "@chakra-ui/react";
 import "./App.css";
 import About from "./pages/About";
@@ -11,8 +13,8 @@ import ProjectDetail, {
 } from "./pages/ProjectDetail";
 import ErrorPage from "./pages/Error";
 import IV from "./pages/IV";
-import React from "react";
 import Team from "./pages/Team";
+import TeamDetail, { loader as TeamDetailLoader } from "./pages/TeamDetail";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,17 @@ const router = createBrowserRouter([
         ],
       },
       { path: "/iv", element: <IV /> },
-      { path: "/team", element: <Team /> },
+      {
+        path: "/team",
+        children: [
+          { index: true, element: <Team /> },
+          {
+            path: ":teamId",
+            element: <TeamDetail />,
+            loader: TeamDetailLoader,
+          },
+        ],
+      },
     ],
   },
 ]);
