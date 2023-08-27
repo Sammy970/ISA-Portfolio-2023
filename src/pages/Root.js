@@ -36,7 +36,7 @@ const RootLayout = () => {
             <GridItem
               rowSpan={1}
               // bg="#f5f5f5"
-              boxShadow="md"
+              // boxShadow="md"
               h="auto"
               w={"full"}
               borderRadius="10px"

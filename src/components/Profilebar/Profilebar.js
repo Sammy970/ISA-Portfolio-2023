@@ -22,13 +22,18 @@ const Profilebar = () => {
         >
           <Link to={"/"}>
             <Image
-              src="https://avatars.githubusercontent.com/u/70690987?s=400&u=6a5fd4c8ef4734bb224bf0f3823b735421078d82&v=4"
-              width={120}
-              borderRadius={{ base: 12, md: "50%" }}
+              src="isa_logo.jpeg"
+              width={{ base: 90, md: 120 }}
+              borderRadius={"50%"}
             />
           </Link>
           <VStack alignItems="end" justifyContent="center">
-            <Text className={classes.nameText} fontFamily={"Work Sans"}>
+            <Text
+              className={classes.nameText}
+              fontFamily={"Work Sans"}
+              fontWeight={700}
+              // fontSize={{ base: 20 }}
+            >
               ISA VIT Pune
             </Text>
             <SimpleGrid
