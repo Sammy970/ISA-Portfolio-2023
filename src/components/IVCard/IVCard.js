@@ -1,9 +1,30 @@
-import React from 'react'
+import { Card, CardBody, Text } from "@chakra-ui/react";
+import React from "react";
 
-const IVCard = () => {
+
+export const IV = () => {
+
   return (
-    <div>IVCard</div>
-  )
-}
+    <>
+     <Card
+      bg={"#F4ECDD"}
+      borderRadius="10px"
+      p={1}
+      w={"full"}
+      boxShadow={"2xl"}
+    >
+      <CardBody>
+        <Text
+          fontFamily="google-sans-medium"
+          textAlign={"center"}
+          fontSize={{ base: 15, md: 20 }}
+        >
+        </Text>
+        <br />
+      </CardBody>
+    </Card>
+  </>
+  );
+};
 
-export default IVCard
+export default IV;
