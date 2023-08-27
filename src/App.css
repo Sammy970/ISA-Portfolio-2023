@@ -15,9 +15,16 @@
   src: url(/src/Fonts/ProductSans-Black.ttf);
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+/* font-family: "'Press Start 2P', cursive" */
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
+/* font-family: 'Work Sans', sans-serif; */
+
 .App {
   /* text-align: center; */
-  background-color: #171717;
+  /* background-color: #0f0f0f; */
+  background-color: #ffffff;
   min-height: 100vh;
   color: wheat;
 }

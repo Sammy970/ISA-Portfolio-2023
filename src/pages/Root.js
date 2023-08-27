@@ -24,7 +24,7 @@ const RootLayout = () => {
             <GridItem colSpan={1} maxH={"70vh"}>
               <Sidebar />
             </GridItem>
-            <GridItem colSpan={2} boxShadow="md" borderRadius="10px">
+            <GridItem colSpan={2} borderRadius="10px">
               <Outlet />
             </GridItem>
           </Grid>
@@ -74,7 +74,7 @@ const RootLayout = () => {
                 </MenuList>
               </Menu>
             </GridItem>
-            <GridItem rowSpan={1} boxShadow="md" borderRadius="10px">
+            <GridItem rowSpan={1} borderRadius="10px">
               <Outlet />
             </GridItem>
           </Grid>

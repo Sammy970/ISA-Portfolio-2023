@@ -5,17 +5,13 @@ import { inject } from "@vercel/analytics";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Certificates from "./pages/Certificates";
-import Blogs from "./pages/Blogs";
 import Projects from "./pages/Projects";
 import RootLayout from "./pages/Root";
 import ProjectDetail, {
   loader as projectDetailLoader,
 } from "./pages/ProjectDetail";
 import ErrorPage from "./pages/Error";
-import { ThemeProvider } from "@mui/material";
-import theme from "./theme";
-import Timeline from "./pages/Timeline";
-import Skills from "./pages/Skills";
+import IV from "./pages/IV";
 
 const router = createBrowserRouter([
   {
@@ -35,17 +31,8 @@ const router = createBrowserRouter([
           },
         ],
       },
-      { path: "/blogs", element: <Blogs /> },
-      { path: "/certificates", element: <Certificates /> },
-      {
-        path: "/timeline",
-        element: (
-          <ThemeProvider theme={theme}>
-            <Timeline />
-          </ThemeProvider>
-        ),
-      },
-      { path: "/skills", element: <Skills /> },
+      { path: "/iv", element: <IV /> },
+      { path: "/team", element: <Certificates /> },
     ],
   },
 ]);

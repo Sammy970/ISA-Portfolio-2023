@@ -1,7 +1,8 @@
-import { Box, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Text, VStack, Grid, GridItem } from "@chakra-ui/react";
 import React from "react";
 import DataCard from "../components/DataCard/DataCard";
 import AboutCard from "../components/AboutCard/AboutCard";
+import AboutPageCard from "../components/AboutPageCard/AboutPageCard";
 
 const colorPalette = [
   "#DDEFE0",
@@ -55,47 +56,18 @@ const AboutMeData =
 const About = () => {
   return (
     <>
-      <Box boxShadow="md" borderRadius="13px" color="#f5f5f5" mb={10}>
-        <Text ml={3} mb={3} fontSize="25px" fontFamily="google-sans-bold">
-          About Me
+      <Box borderRadius="13px" color="#0f0f0f" mb={10}>
+        <Text ml={3} mb={3} fontSize="25px" fontFamily="google-sans-black">
+          About ISA
         </Text>
-        <VStack gap={4}>
-          <AboutCard data={AboutMeData} />
-        </VStack>
-      </Box>
-      <Box boxShadow="md" borderRadius="13px" color="#f5f5f5" mb={10}>
-        <Text ml={3} mb={3} fontSize="25px" fontFamily="google-sans-bold">
-          Experience
-        </Text>
-        <VStack gap={4}>
-          {ExperienceData.map((data, index) => (
-            <DataCard
-              key={data.id}
-              year={data.year}
-              firstText={data.post}
-              secondText={data.where}
-              image={data.image}
-              color={colorPalette[index % colorPalette.length]}
-            />
-          ))}
-        </VStack>
-      </Box>
-      <Box boxShadow="md" borderRadius="13px" color="#f5f5f5" mb={10}>
-        <Text ml={3} mb={3} fontSize="25px" fontFamily="google-sans-bold">
-          Education
-        </Text>
-        <VStack gap={4}>
-          {EducationData.map((data, index) => (
-            <DataCard
-              key={data.id}
-              year={data.year}
-              firstText={data.branchName}
-              secondText={data.collegeName}
-              image={data.image}
-              color={colorPalette[index % colorPalette.length]}
-            />
-          ))}
-        </VStack>
+        <Grid templateColumns={{ base: "auto", md: "1fr 1fr" }} gap={20}>
+          <GridItem boxShadow="2xl" maxW={{ base: "70%", md: "full" }}>
+            <AboutPageCard variant={"one"} />
+          </GridItem>
+          <GridItem boxShadow="2xl" maxW={"full"}>
+            <AboutPageCard variant={"two"} />
+          </GridItem>
+        </Grid>
       </Box>
     </>
   );

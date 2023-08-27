@@ -28,7 +28,9 @@ const Profilebar = () => {
             />
           </Link>
           <VStack alignItems="end" justifyContent="center">
-            <Text className={classes.nameText}>Samyak Jain</Text>
+            <Text className={classes.nameText} fontFamily={"Work Sans"}>
+              ISA VIT Pune
+            </Text>
             <SimpleGrid
               w={"full"}
               columns={{ base: 3, sm: 5, md: 6 }}
