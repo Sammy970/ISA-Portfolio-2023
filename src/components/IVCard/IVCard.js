@@ -1,30 +1,35 @@
-import { Card, CardBody, Text } from "@chakra-ui/react";
+import { Card, CardBody, CardHeader } from "@chakra-ui/card";
+import { Divider, Text } from "@chakra-ui/layout";
+import { Image, VStack } from "@chakra-ui/react";
 import React from "react";
 
-
-export const IV = () => {
-
+const IVCard = ({ title, subtitle, image }) => {
   return (
-    <>
-     <Card
-      bg={"#F4ECDD"}
-      borderRadius="10px"
-      p={1}
-      w={"full"}
-      boxShadow={"2xl"}
+    <Card
+      h={"full"}
+      fontFamily={"'Press Start 2P', cursive"}
+      color={"#0f0f0f"}
+      borderRadius={0}
+      boxShadow={"8px -8px 0px #0f0f0f"}
+      border={"2px solid black"}
     >
-      <CardBody>
-        <Text
-          fontFamily="google-sans-medium"
-          textAlign={"center"}
-          fontSize={{ base: 15, md: 20 }}
-        >
-        </Text>
-        <br />
+      <CardHeader>
+        <VStack>
+          <Text fontSize={15}>{title}</Text>
+          <Text fontSize={14}>{subtitle}</Text>
+        </VStack>
+      </CardHeader>
+      <Divider />
+      <CardBody
+        p={2}
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
+        <Image src={image} bgSize={"revert"} w={"full"} h={"full"} />
       </CardBody>
     </Card>
-  </>
   );
 };
 
-export default IV;
+export default IVCard;

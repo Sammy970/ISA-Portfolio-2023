@@ -12,9 +12,9 @@ import ProjectDetail, {
   loader as projectDetailLoader,
 } from "./pages/ProjectDetail";
 import ErrorPage from "./pages/Error";
-import IV from "./pages/IV";
 import Team from "./pages/Team";
 import TeamDetail, { loader as TeamDetailLoader } from "./pages/TeamDetail";
+import IV from "./pages/IV";
 
 const router = createBrowserRouter([
   {
