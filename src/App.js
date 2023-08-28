@@ -15,6 +15,7 @@ import ErrorPage from "./pages/Error";
 import Team from "./pages/Team";
 import TeamDetail, { loader as TeamDetailLoader } from "./pages/TeamDetail";
 import IV from "./pages/IV";
+import Scholarships from "./pages/Scholarships";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
           },
         ],
       },
+      { path: "/scholarships", element: <Scholarships /> },
       { path: "/iv", element: <IV /> },
       {
         path: "/team",

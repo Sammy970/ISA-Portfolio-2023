@@ -19,6 +19,7 @@ const Sidebar = () => {
     >
       <Link to={"/"}>About</Link>
       <Link to={"/projects"}>Projects</Link>
+      <Link to={"/scholarships"}>Scholarships</Link>
       <Link to={"/iv"}>Industrial Visit</Link>
       <Link to={"/team"}>Team</Link>
     </VStack>
