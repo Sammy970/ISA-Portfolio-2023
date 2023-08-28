@@ -56,6 +56,9 @@ const RootLayout = () => {
                   <Link to={"/projects"}>
                     <MenuItem>Projects</MenuItem>
                   </Link>
+                  <Link to={"/scholarships"}>
+                    <MenuItem>Scholarships</MenuItem>
+                  </Link>
                   <Link to={"/iv"}>
                     <MenuItem>Industrial Visits</MenuItem>
                   </Link>

@@ -132,7 +132,7 @@ const Scholarships = () => {
             gap={10}
           >
             {isaEduFoundation.map((isaEduData) => (
-              <GridItem>
+              <GridItem key={isaEduData.id}>
                 <ScholarshipCard
                   imageSrc={isaEduData.imageSrc}
                   name={isaEduData.name}
@@ -166,7 +166,7 @@ const Scholarships = () => {
             gap={10}
           >
             {isaWasteWater.map((isaWWData) => (
-              <GridItem>
+              <GridItem key={isaWWData.id}>
                 <ScholarshipCard
                   imageSrc={isaWWData.imageSrc}
                   name={isaWWData.name}
@@ -200,7 +200,7 @@ const Scholarships = () => {
             gap={10}
           >
             {isaPowerDiv.map((isaPDData) => (
-              <GridItem>
+              <GridItem key={isaPDData.id}>
                 <ScholarshipCard
                   imageSrc={isaPDData.imageSrc}
                   name={isaPDData.name}
@@ -234,7 +234,7 @@ const Scholarships = () => {
             gap={10}
           >
             {isaAnalysisDiv.map((isaADData) => (
-              <GridItem>
+              <GridItem key={isaADData.id}>
                 <ScholarshipCard
                   imageSrc={isaADData.imageSrc}
                   name={isaADData.name}
