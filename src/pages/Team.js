@@ -48,6 +48,12 @@ const domainData = [
     title: "Robotics",
     textWidth: "100%",
   },
+  {
+    id: "cybersecurity",
+    srcImg: "/DomainCard-Assets/cybersecurity.png",
+    title: "Cybersecurity",
+    textWidth: "100%",
+  },
 ];
 
 const domainDataManagement = [
