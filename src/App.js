@@ -1,10 +1,11 @@
+import React from "react";
+
 import { Container } from "@chakra-ui/react";
 import "./App.css";
 import About from "./pages/About";
 import { inject } from "@vercel/analytics";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Certificates from "./pages/Certificates";
 import Projects from "./pages/Projects";
 import RootLayout from "./pages/Root";
 import ProjectDetail, {
@@ -12,6 +13,8 @@ import ProjectDetail, {
 } from "./pages/ProjectDetail";
 import ErrorPage from "./pages/Error";
 import IV from "./pages/IV";
+import Team from "./pages/Team";
+import TeamDetail, { loader as TeamDetailLoader } from "./pages/TeamDetail";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +22,10 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <About /> },
+      {
+        index: true,
+        element: <About />,
+      },
       {
         path: "/projects",
         children: [
@@ -32,7 +38,17 @@ const router = createBrowserRouter([
         ],
       },
       { path: "/iv", element: <IV /> },
-      { path: "/team", element: <Certificates /> },
+      {
+        path: "/team",
+        children: [
+          { index: true, element: <Team /> },
+          {
+            path: ":teamId",
+            element: <TeamDetail />,
+            loader: TeamDetailLoader,
+          },
+        ],
+      },
     ],
   },
 ]);

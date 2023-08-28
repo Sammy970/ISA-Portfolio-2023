@@ -36,7 +36,7 @@ const RootLayout = () => {
             <GridItem
               rowSpan={1}
               // bg="#f5f5f5"
-              boxShadow="md"
+              // boxShadow="md"
               h="auto"
               w={"full"}
               borderRadius="10px"
@@ -56,20 +56,11 @@ const RootLayout = () => {
                   <Link to={"/projects"}>
                     <MenuItem>Projects</MenuItem>
                   </Link>
-                  <Link to={"/blogs"}>
-                    <MenuItem>Blogs</MenuItem>
+                  <Link to={"/iv"}>
+                    <MenuItem>Industrial Visits</MenuItem>
                   </Link>
-                  <Link to={"/skills"}>
-                    <MenuItem>Skills</MenuItem>
-                  </Link>
-                  <Link to={"/certificates"}>
-                    <MenuItem>Certificates</MenuItem>
-                  </Link>
-                  <Link to={"/timeline"}>
-                    <MenuItem>Timeline</MenuItem>
-                  </Link>
-                  <Link to={"/contacts"}>
-                    <MenuItem>Contacts</MenuItem>
+                  <Link to={"/team"}>
+                    <MenuItem>Team</MenuItem>
                   </Link>
                 </MenuList>
               </Menu>
