@@ -41,7 +41,7 @@ const TeamDetail = () => {
         </Grid>
       )}
       {id === "core" && (
-        <VStack w={"full"} gap={{ base: 14, md: 24 }}>
+        <VStack w={"full"} mb={10} gap={{ base: 14, md: 24 }}>
           <CoreDetailCard
             position={"left"}
             name={"Krushna More"}
@@ -92,7 +92,9 @@ const TeamDetail = () => {
             name={"Jay Mehta"}
             isaPosition={"Treasurer"}
             imgSrc={"/TeamData/Core/jay.png"}
-            size={"45%"}
+            size={{ base: "51%", md: "50.5%" }}
+            topBase={-6}
+            topMd={-20}
           />
         </VStack>
       )}
