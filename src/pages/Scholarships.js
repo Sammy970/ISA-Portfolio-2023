@@ -126,9 +126,9 @@ const Scholarships = () => {
             <AccordionIcon />
           </AccordionButton>
         </h2>
-        <AccordionPanel pb={4}>
+        <AccordionPanel pb={4} maxW={{ base: "90%", md: "full" }} m={"auto"}>
           <Grid
-            templateColumns={{ base: "1fr ", md: "1fr 1fr", lg: "1fr 1fr 1fr" }}
+            templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }}
             gap={10}
           >
             {isaEduFoundation.map((isaEduData) => (

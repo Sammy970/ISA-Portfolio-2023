@@ -18,6 +18,7 @@ const TeamDetail = () => {
         fontWeight={700}
         fontSize={40}
         mb={10}
+        ml={{ md: 10 }}
       >
         {team}
       </Text>
@@ -25,7 +26,8 @@ const TeamDetail = () => {
         <Grid
           templateColumns={{
             base: "1fr",
-            md: "40% 40%",
+            md: "1fr 1fr",
+            lg: "35% 35%",
           }}
           m={"auto"}
           justifyContent={"center"}

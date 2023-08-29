@@ -6,11 +6,10 @@
   box-shadow: 11px -11px 0px #0f0f0f;
   transition: 0.5s;
   transform: scale(1.1);
-  cursor: pointer;
 }
 
 .animated-image {
-  transition: transform 1s ease-in-out;
+  transition: border 0.3s ease-in-out, transform 1s ease-in-out;
   animation: bounce 2s infinite alternate;
   transform: translateY(0); /* Set the initial position */
 }

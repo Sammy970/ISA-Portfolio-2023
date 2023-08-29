@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Divider,
   HStack,
   IconButton,
@@ -20,18 +19,9 @@ import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import { getImageSize } from "react-image-size";
 import { InfoOutlineIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
-
-const colorPalette = [
-  "#DDEFE0",
-  "#F4ECDD",
-  "#EFDADA",
-  "#DEE0EF",
-  // Add more colors if needed
-];
 
 const ProjectDetailCard = (props) => {
-  const { title, techUsed, desc, image, style, linkToWeb } = props;
+  const { title, techUsed, desc, image, style } = props;
   const [index, setIndex] = useState(-1);
   const [photos, setPhotos] = useState([]);
 
@@ -55,31 +45,22 @@ const ProjectDetailCard = (props) => {
 
   return (
     <VStack alignItems="center" w={"full"} gap={5} mb={10}>
-      <VStack alignItems="left" spacing={5} w={"full"}>
-        <Text fontFamily="google-sans-black" color={"#FFFFFF"} fontSize={30}>
+      <VStack alignItems="left" spacing={5} w={"full"} color={"#0f0f0f"}>
+        <Text
+          fontFamily="'Work Sans', sans serif"
+          fontWeight={700}
+          letterSpacing={3}
+          fontSize={{ base: 24, md: 25, lg: 31 }}
+        >
           {title}
         </Text>
 
         <Divider />
 
-        <Link to={linkToWeb} target="_blank">
-          <Button
-            w={{ base: "44%", sm: "40%", md: "25%" }}
-            backgroundColor={"#EFDADA"}
-            alignSelf={"center"}
-            fontFamily="google-sans-regular"
-            color={"#1F1F1F"}
-            fontSize={{ base: 18, md: 20 }}
-          >
-            Visit Website
-          </Button>
-        </Link>
-
         <Text
           alignSelf={"start"}
-          fontFamily="google-sans-medium"
-          color={"#FFFFFF"}
-          fontSize={25}
+          fontFamily="'Press Start 2P', cursive"
+          fontSize={{ base: 16, md: 20, lg: 25 }}
         >
           Tech Used -
         </Text>
@@ -90,13 +71,20 @@ const ProjectDetailCard = (props) => {
           alignItems={"center"}
         >
           {techUsed.map((tech, index) => {
-            const color = colorPalette[index % colorPalette.length];
             return (
               <Tag
                 size={"lg"}
                 key={tech}
                 variant="subtle"
-                backgroundColor={color}
+                // backgroundColor={color}
+                backgroundColor={"white"}
+                border={"2px solid black"}
+                borderRadius={0}
+                fontFamily="'Work Sans', sans serif"
+                fontWeight={700}
+                letterSpacing={2}
+                color={"#0f0f0f"}
+                boxShadow={"lg"}
               >
                 <TagLabel>{tech}</TagLabel>
               </Tag>
@@ -108,17 +96,16 @@ const ProjectDetailCard = (props) => {
 
         <Text
           alignSelf={"start"}
-          fontFamily="google-sans-medium"
-          color={"#FFFFFF"}
-          fontSize={25}
+          fontFamily="'Press Start 2P', cursive"
+          fontSize={{ base: 16, md: 20, lg: 25 }}
         >
           Description -
         </Text>
 
         <Text
-          fontFamily="google-sans-regular"
+          fontFamily="'Work Sans', sans serif"
+          fontWeight={400}
           textAlign={"justify"}
-          color={"#FFFFFF"}
           fontSize={{ base: 17, md: 20 }}
         >
           {desc}
@@ -130,10 +117,10 @@ const ProjectDetailCard = (props) => {
       <VStack w={"full"}>
         <HStack w={"full"} justifyContent={"space-between"}>
           <Text
-            alignSelf={"start"}
-            fontFamily="google-sans-medium"
-            color={"#FFFFFF"}
-            fontSize={25}
+            alignSelf={"center"}
+            // alignContent={"center"}
+            fontFamily="'Press Start 2P', cursive"
+            fontSize={{ base: 16, md: 20, lg: 25 }}
           >
             Screenshots
           </Text>
@@ -141,14 +128,15 @@ const ProjectDetailCard = (props) => {
           <Popover>
             <PopoverTrigger>
               <IconButton
+                border={"2px solid black"}
                 variant="outline"
                 size={"md"}
-                icon={<InfoOutlineIcon color={"#EFDADA"} />}
+                icon={<InfoOutlineIcon color={"#0f0f0f"} />}
               />
             </PopoverTrigger>
             <PopoverContent
               fontFamily={"google-sans-medium"}
-              color={"#1F1F1F"}
+              color={"#0f0f0f"}
               alignItems={"center"}
               justifyContent={"center"}
             >

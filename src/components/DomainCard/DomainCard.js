@@ -7,11 +7,13 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 import classes from "./DomainCard.module.css";
 
 export const CoreDomainCard = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <Card
       maxW={"full"}
@@ -19,6 +21,8 @@ export const CoreDomainCard = () => {
       borderRadius={0}
       border={"2px solid black"}
       className={classes.card}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <CardHeader
         p={1}
@@ -37,6 +41,7 @@ export const CoreDomainCard = () => {
           <Image
             src="/DomainCard-Assets/core_team_image.png"
             w={{ base: 90, md: 140, lg: 150, xl: 160 }}
+            className={isHovered ? classes["animated-image"] : ""}
           />
           <Text
             fontFamily={"'Work Sans', sans-serif"}
@@ -54,6 +59,8 @@ export const CoreDomainCard = () => {
 };
 
 const DomainCard = ({ srcImg, title, textWidth }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <Card
       maxW={"full"}
@@ -62,6 +69,8 @@ const DomainCard = ({ srcImg, title, textWidth }) => {
       borderRadius={0}
       border={"2px solid black"}
       className={classes.card}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <CardHeader
         p={1}
@@ -88,6 +97,7 @@ const DomainCard = ({ srcImg, title, textWidth }) => {
             left={{ base: -8, md: -10 }}
             src={srcImg}
             w={{ base: "70px", md: "90px" }}
+            className={isHovered ? classes["animated-image"] : ""}
           />
           <Text
             textAlign={"right"}

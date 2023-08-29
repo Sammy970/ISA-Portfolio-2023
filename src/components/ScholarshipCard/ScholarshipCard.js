@@ -7,14 +7,25 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+
+import React, { useState } from "react";
+
+import classes from "./ScholarshipCard.module.css";
 
 const ScholarshipCard = ({ imageSrc, name, amount }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <Card
-      boxShadow={"8px -8px 0px #0f0f0f"}
       borderRadius={0}
       border={"2px solid #0f0f0f"}
+      boxShadow={
+        isHovered
+          ? "12px -12px 0px #0f0f0f" // Increased shadow on hover
+          : "8px -8px 0px #0f0f0f"
+      }
+      transition="box-shadow 0.3s ease-in-out"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <CardHeader>
         <Text
@@ -31,8 +42,10 @@ const ScholarshipCard = ({ imageSrc, name, amount }) => {
           <Image
             src={imageSrc}
             borderRadius={"50%"}
-            w={{ base: 100, md: 150, lg: 150, xl: 200 }}
-            border={"3px solid black"}
+            w={{ base: 120, md: 150, lg: 150, xl: 180 }}
+            className={isHovered ? classes["animated-image"] : ""}
+            // border={"3px solid black"}
+            // transition="border 0.3s ease-in-out"
           />
           <Text
             fontFamily={"'Work Sans',sans-serif"}

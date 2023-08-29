@@ -1,52 +1,56 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 
 const ProjectsData = [
   {
-    id: "linkedin-post-maker",
-    imageLoc: "project-image-assets/project1/project1.png",
+    id: "cnc-mechanism",
+    no: 1,
+    title: "Cnc Mechanism Based Pick and Place Robot",
+    imageLoc: "/project-image-assets/project1/project1.png",
   },
   {
-    id: "link-kar",
-    imageLoc: "project-image-assets/project2/project2.png",
+    id: "delta-robot",
+    no: 2,
+    title: "Delta Robot",
+    imageLoc: "/project-image-assets/project2/project2.png",
   },
   {
-    id: "study-mate",
-    imageLoc: "project-image-assets/project3/project3.png",
-  },
-  {
-    id: "pdf-guardian",
-    imageLoc: "project-image-assets/project4/project4.png",
-  },
-  {
-    id: "samyakgpt-ui",
-    imageLoc: "project-image-assets/project5/project5.png",
-  },
-  {
-    id: "text-utils",
-    imageLoc: "project-image-assets/project6/project6.png",
+    id: "inspection-drone",
+    no: 3,
+    title: "Inspection Drone",
+    imageLoc: "/project-image-assets/project3/project3.png",
   },
 ];
 const Projects = () => {
   return (
     <>
-      <Grid
-        templateColumns={{
-          base: "auto",
-          md: "auto auto",
-          lg: "auto auto",
-          xl: "auto auto auto",
-        }}
-        gap={5}
-        mb={10}
-      >
-        {ProjectsData.map((proj) => (
-          <GridItem key={proj.id}>
-            <ProjectCard id={proj.id} image={proj.imageLoc} />
-          </GridItem>
-        ))}
-      </Grid>
+      <Box maxW={{ base: "full", md: "95%" }} m={"auto"}>
+        <Grid
+          templateColumns={{
+            base: "auto",
+            md: "1fr 1fr",
+            lg: "40% 40%",
+            xl: "1fr 1fr 1fr",
+          }}
+          m={"auto"}
+          justifyContent={"center"}
+          gap={14}
+          mt={5}
+          mb={10}
+        >
+          {ProjectsData.map((proj) => (
+            <GridItem key={proj.id}>
+              <ProjectCard
+                id={proj.id}
+                no={proj.no}
+                title={proj.title}
+                image={proj.imageLoc}
+              />
+            </GridItem>
+          ))}
+        </Grid>
+      </Box>
     </>
   );
 };

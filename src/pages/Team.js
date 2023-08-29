@@ -104,7 +104,7 @@ const domainDataManagement = [
 const Team = () => {
   const navigate = useNavigate();
 
-  return (
+  return ( 
     <>
       <Box
         maxW={{ base: "90%", sm: "60%", md: "65%", lg: "65%" }}
