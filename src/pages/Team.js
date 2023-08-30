@@ -76,6 +76,12 @@ const domainDataManagement = [
     textWidth: "100%",
   },
   {
+    id: "operations",
+    srcImg: "/DomainCard-Assets/operation.png",
+    title: "Operations",
+    textWidth: "100%",
+  },
+  {
     id: "branding",
     srcImg: "/DomainCard-Assets/branding.png",
     title: "Branding",

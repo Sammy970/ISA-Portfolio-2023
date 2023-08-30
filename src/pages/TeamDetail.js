@@ -403,6 +403,30 @@ export function loader({ params }) {
       ],
     },
     {
+      id: "operations",
+      team: "Operations Team",
+      members: [
+        {
+          id: "operationsM1",
+          name: "Pushkaraj Shahne",
+          position: "Head",
+          photo: "/TeamData/operations/pushkraj.png",
+        },
+        {
+          id: "operationsM2",
+          name: "Radha Bhutada",
+          position: "Head",
+          photo: "/TeamData/operations/radha.png",
+        },
+        {
+          id: "operationsM3",
+          name: "Vyankatesh Patwardhan",
+          position: "Head",
+          photo: "/TeamData/operations/vyankatesh.png",
+        },
+      ],
+    },
+    {
       id: "branding",
       team: "Branding Team",
       members: [

@@ -1,7 +1,7 @@
 import {
   Container,
+  Grid,
   Image,
-  SimpleGrid,
   Stack,
   Text,
   VStack,
@@ -9,7 +9,6 @@ import {
 import React from "react";
 import classes from "./Profilebar.module.css";
 import { Link } from "react-router-dom";
-import { wrap } from "framer-motion";
 
 const Profilebar = () => {
   return (
@@ -36,53 +35,49 @@ const Profilebar = () => {
             >
               ISA VIT Pune
             </Text>
-            <SimpleGrid
+            <Grid
               w={"full"}
-              columns={{ base: 3, sm: 5, md: 6 }}
-              flexWrap={wrap}
+              templateColumns={"1fr 1fr 1fr"}
+              // flexWrap={wrap}
+              justifyContent={"space-evenly"}
+              m={"auto"}
+              display={"flex"}
+              // gap={3}
               // spacing={3}
-              gap={3}
             >
-              <Link to={"mailto:jainsamyak2002.sj@gmail.com"}>
+              <Link to={"mailto:vit.isa@vit.edu"}>
                 <Image
                   src="https://cdn0.iconfinder.com/data/icons/social-circle-3/72/Email-512.png"
-                  className={classes.socialIcon}
+                  // className={classes.socialIcon}
+                  w={46}
+                  h={46}
                 />
               </Link>
-              <Link to={"https://samyak970.medium.com/"} target="_blank">
-                <Image
-                  src="https://cdn4.iconfinder.com/data/icons/social-media-circle-7/512/Medium_circle-512.png"
-                  className={classes.socialIcon}
-                />
-              </Link>
-              <Link to={"https://github.com/Sammy970"} target="_blank">
-                <Image
-                  src="https://cdn4.iconfinder.com/data/icons/miu-black-social-2/60/github-512.png"
-                  className={classes.socialIcon}
-                />
-              </Link>
+
               <Link
-                to={"https://www.linkedin.com/in/samyak-jain-3a6639172/"}
+                to={"https://www.linkedin.com/company/isa-vit-chapter"}
                 target="_blank"
               >
                 <Image
-                  src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Linkedin_svg-512.png"
-                  className={classes.socialIcon}
+                  src="/linkedin.png"
+                  // className={classes.socialIcon}
+                  w={46}
+                  h={46}
                 />
               </Link>
-              <Link>
+
+              <Link
+                to={"https://www.instagram.com/isa.vit_pune/"}
+                target="_blank"
+              >
                 <Image
-                  src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Instagram_svg-512.png"
-                  className={classes.socialIcon}
+                  src="https://cdn4.iconfinder.com/data/icons/miu-black-social-2/60/instagram-512.png"
+                  // className={classes.socialIcon}
+                  w={46}
+                  h={46}
                 />
               </Link>
-              <Link>
-                <Image
-                  src="https://cdn2.iconfinder.com/data/icons/threads-by-instagram/24/x-logo-twitter-new-brand-contained-outline-512.png"
-                  className={classes.socialIcon}
-                />
-              </Link>
-            </SimpleGrid>
+            </Grid>
           </VStack>
         </Stack>
       </Container>
