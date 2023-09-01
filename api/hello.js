@@ -6,9 +6,9 @@ export default async function handler(req, res) {
   // console.log(client);
 
   await client.connect();
-  const db = await client.db("countDB");
-  const collection = await db.collection("countCollection");
-  const data = collection.find({}).toArray;
+  const database = client.db("countDB");
+  const collection = database.collection("countCollection");
+  const data = await collection.find({}).toArray();
 
   res.status(200).json({ message: data });
 }
