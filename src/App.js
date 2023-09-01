@@ -16,6 +16,7 @@ import Team from "./pages/Team";
 import TeamDetail, { loader as TeamDetailLoader } from "./pages/TeamDetail";
 import IV from "./pages/IV";
 import Scholarships from "./pages/Scholarships";
+import { useEffect } from "react";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,20 @@ const router = createBrowserRouter([
 
 function App() {
   inject();
+
+  useEffect(() => {
+    async function fetchVisitCount() {
+      try {
+        const response = await fetch("/api/hello");
+        const data = await response.json();
+        console.log(data); // You can handle the response as needed
+      } catch (error) {
+        console.error("Error fetching visit count:", error);
+      }
+    }
+
+    fetchVisitCount();
+  }, []);
 
   return (
     <div className="App">
