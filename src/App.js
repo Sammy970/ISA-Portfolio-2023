@@ -62,7 +62,7 @@ function App() {
   useEffect(() => {
     async function addVisitCount() {
       try {
-        const response = await fetch("/api/hello.js");
+        const response = await fetch("/api/hello");
         const data = await response.json();
         console.log(data);
         // console.log("Document written with ID: ");
