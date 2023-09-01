@@ -60,17 +60,18 @@ function App() {
   inject();
 
   useEffect(() => {
-    async function fetchVisitCount() {
+    async function addVisitCount() {
       try {
-        const response = await fetch("/api/hello");
+        const response = await fetch("/api/hello.js");
         const data = await response.json();
-        console.log(data); // You can handle the response as needed
-      } catch (error) {
-        console.error("Error fetching visit count:", error);
+        console.log(data);
+        // console.log("Document written with ID: ");
+      } catch (e) {
+        console.error("Error adding documents ", e);
       }
     }
 
-    fetchVisitCount();
+    addVisitCount();
   }, []);
 
   return (
