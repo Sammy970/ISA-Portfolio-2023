@@ -62,14 +62,10 @@ function App() {
   useEffect(() => {
     async function addVisitCount() {
       try {
-        const response = await fetch("/api/getCount");
-        const data = await response.json();
-        console.log("Get Count = ", data);
-
         const response2 = await fetch("/api/incCount");
         const data2 = await response2.json();
         console.log("Inc Count = ", data2);
-        
+
         // console.log("Document written with ID: ");
       } catch (e) {
         console.error("Error adding documents ", e);

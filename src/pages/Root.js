@@ -13,11 +13,13 @@ import {
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import Sidebar from "../components/Sidebar/Sidebar";
+import CountCard from "../components/CountCard/CountCard";
 
 const RootLayout = () => {
   return (
     <>
       <Profilebar />
+      <CountCard />
       <main>
         <Box display={{ base: "none", md: "none", lg: "block" }}>
           <Grid templateColumns={"230px auto auto"} gap={5}>

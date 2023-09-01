@@ -24,7 +24,5 @@ export default async function handler(req, res) {
   // Close the MongoDB connection
   await client.close();
 
-  //   const data = await collection.updateOne({}).toArray();
-
   res.status(200).send(result);
 }
